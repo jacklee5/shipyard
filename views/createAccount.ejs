@@ -3,14 +3,16 @@
     <head>
         <title>Create Account | Shipyard</title>
         <meta charset = "utf-8">
+        <link href = "css/style.css" rel = "stylesheet">
     </head>
     <body>
         <h1>Create New Account</h1>
+        <p class = "error"><%= error %></p>
         <form action = "/create-account" method = "POST">
             <input name = "username" placeholder = "username"><br>
-            <input name = "password" placeholder = "password"><br>
-            <input name = "confirm-password" placeholder = "confirm password"><br>
-            Already have an account? <a href = "login.html">Log in.</a><br>
+            <input name = "password" placeholder = "password" type = "password"><br>
+            <input name = "confirmPassword" placeholder = "confirm password" type = "password"><br>
+            Already have an account? <a href = "/login">Log in.</a><br>
             <button type = "submit">Create Account</button>
         </form>
     </body>
