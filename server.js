@@ -42,14 +42,17 @@ app.post("/create-account", (req, res) => {
     let password = req.body.password;
     let confirmPassword = req.body.confirmPassword;
     
+    if(password !== confirmPassword) return res.render(__dirname + "/views/createAccount.ejs", {error:"Passwords do not match!"});
+    if(username.length > 20) return res.render(__dirname + "/views/createAccount.ejs", {error:"Username is too long!"});
+    if(password.length > 20) return res.render(__dirname + "/views/createAccount.ejs", {error:"Password is too long!"});
+    if(!username) return res.render(__dirname + "/views/createAccount.ejs", {error:"Please enter a username!"});
+    if(!password) return res.render(__dirname + "/views/createAccount.ejs", {error:"Please enter a password!"});
+    
     db.get("SELECT username FROM users WHERE username = $username", {
         $username: username
     }, (err, row) => {
         if(err) return console.log(err);
         if(row) return res.render(__dirname + "/views/createAccount.ejs", {error:"Sorry, someone already has that username!"})
-        if(password !== confirmPassword) return res.render(__dirname + "/views/createAccount.ejs", {error:"Passwords do not match!"});
-        if(username.length > 20) return res.render(__dirname + "/views/createAccount.ejs", {error:"Username is too long!"})
-        if(password.length > 20) return res.render(__dirname + "/views/createAccount.ejs", {error:"Password is too long!"})
         
         db.run("INSERT INTO users (username, password) VALUES ($username, $password)", {
             $username: username,

@@ -1,0 +1,39 @@
+body{
+    margin:0px;
+    background: url('../img/login-background.png');
+    background-size:contain;
+    width:100%;
+    height:100vh;
+    color:white;
+}
+h1{
+    margin: -64px 0px;
+    color:white;
+    font-family:"Bungee";
+    font-size:112px;
+}
+#login-box{
+    text-align:center;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, calc(-50%));
+}
+input{
+    outline:none;
+    border:none;
+    padding:16px;
+    margin-bottom:8px;
+}
+input:focus{
+    outline:none;
+}
+button{
+    margin-top:8px;
+}
+a:visited{
+    color:#BA68C8;
+}
+a{
+    color:#7986CB;
+}
