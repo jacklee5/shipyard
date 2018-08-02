@@ -4,15 +4,19 @@
         <title>Login | Shipyard</title>
         <meta charset = "utf-8">
         <link href = "css/style.css" rel = "stylesheet">
+        <link rel='stylesheet' type='text/css' href='login.css'>
     </head>
     <body>
-        <h1>Login</h1>
-        <p class = "error"><%= error %></p>
-        <form action = "/login" method = "POST">
-            <input name = "username" placeholder = "username"><br>
-            <input name = "password" placeholder = "password" type = "password"><br>
-            Don't have an account? <a href = "/create-account">Create new account</a><br>
-            <button type = "submit">Login</button>
-        </form>
+        <div id = "login-box">
+            <h1>Login</h1>
+            <p class = "error"><%= error %></p>
+            <form action = "/login" method = "POST">
+                <input name = "username" placeholder = "username"><br>
+                <input name = "password" placeholder = "password" type = "password"><br>
+                Don't have an account? <a href = "/create-account">Create new account</a><br>
+                <button type = "submit">Login</button>
+            </form>
+        </div>
+    <body>
     </body>
 </html>
