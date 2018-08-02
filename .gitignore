@@ -74,3 +74,4 @@ typings/
 
 #databases
 .sqlite
+db.sqlite
