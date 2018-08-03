@@ -8,14 +8,15 @@
         <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:400,400i,600,700,700i" rel="stylesheet">
     </head>
     <body>
+		<h1 class = "game-title">SHIPYARD</h1>
         <div id = "login-box">
             <h1 style = "white-space:nowrap">New Account</h1>
             <p class = "error"><%= error %></p>
             <form action = "/create-account" method = "POST">
-                <input name = "username" placeholder = "username"><br>
-                <input name = "password" placeholder = "password" type = "password"><br>
-                <input name = "confirmPassword" placeholder = "confirm password" type = "password"><br>
-                Already have an account? <br><a href = "/login">Log in.</a><br>
+                <input name = "username" placeholder = "Username"><br>
+                <input name = "password" placeholder = "Password" type = "password"><br>
+                <input name = "confirmPassword" placeholder = "Confirm password" type = "password"><br>
+                Already have an account? <br><a href = "/login">Log in</a><br>
                 <button type = "submit">Create Account</button>
             </form>
         </div>

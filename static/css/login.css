@@ -10,7 +10,19 @@ h1{
     margin: -64px 0px;
     color:white;
     font-family:"Bungee";
-    font-size:112px;
+    font-size:108px;
+}
+.game-title {
+	margin-bottom: 0.25em;
+	position:absolute;
+    left:50%;
+    top:25%;
+    transform:translate(-50%, calc(-50%));
+    font-family:"Bungee";
+    font-size:148px;
+	background: linear-gradient(red 0%, orange 50%, white 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 #login-box{
     text-align:center;
@@ -34,6 +46,11 @@ button{
 a:visited{
     color:#BA68C8;
 }
+a:hover {
+	text-decoration: underline;
+}
 a{
-    color:#7986CB;
+	font-weight: bold;
+    color:white;
+	text-decoration: none;
 }
