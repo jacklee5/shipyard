@@ -54,3 +54,17 @@ a{
     color:white;
 	text-decoration: none;
 }
+button {
+	-webkit-transition-duration: 0.4s; /* For safari...I think */
+    transition-duration: 0.4s;
+	background-color: black;
+	padding: 1px 10px 1px 10px;
+	color: white;
+	font-family:"Bungee";
+	font-size: 20px;
+	border: 4px solid white;
+}
+button:hover {
+	background-color: white;
+	color: black;
+}
