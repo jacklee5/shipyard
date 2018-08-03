@@ -23,6 +23,9 @@ app.set('view engine', 'ejs');
 let sqlite3 = require('sqlite3');
 let db = new sqlite3.Database('./db.sqlite');
 
+//create users table if it doesn't already exist
+db.run("CREATE TABLE IF NOT EXISTS users(username VARCHAR(20), password VARCHAR(20))");
+
 app.use(express.static('static'));
 
 // Routing
