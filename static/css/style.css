@@ -4,3 +4,9 @@
 body{
     font-family:"Source Sans Pro";
 }
+#logout-button {
+	background-color: red; /*  this was for debugging, pls ignore it or remove once it is no longer needed */
+	position: absolute;
+	float: right;
+	
+}
