@@ -22,6 +22,7 @@ button {
 	border: 3px solid #3de1ff;
 	color: #3de1ff;
 	background-color: #186aad;
+	
 }
 
 /*.dropdown-button:focus {
@@ -48,6 +49,20 @@ button {
 	display: block;
 }
 
-.white-text {
+.white {
 	color: white;
+}
+
+.landing-div {
+	background-color: #1864ad;
+	width: 100%;
+	height: 700px;
+}
+
+.landing-div-directory {
+	
+}
+
+.header {
+	display: inline;
 }

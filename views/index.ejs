@@ -8,31 +8,61 @@
     </head>
     <body>
         
-        <h1>Welcome back, <%= name %></h1>
-        <div class = "dropdown-div">
-			<button id = "account-options" class = "dropdown-button">Options</button>
-			<div id = "dropdown-menu" class = "dropdown-content">
-				<form method = "POST" action = "/logout">
-					<button id = "logout-button" type = "submit">Logout</button>
-				</form>
-				<button>btn 2</button>
-				<button>btn 3</button>
+		<div class = "header">
+			<h1>Welcome back, <%= name %></h1>
+			<div class = "dropdown-div">
+				<button id = "account-options" class = "dropdown-button white">Options</button>
+				<div id = "dropdown-menu" class = "dropdown-content">
+					<form method = "POST" action = "/logout">
+						<button id = "logout-button" type = "submit">Logout</button>
+					</form>
+					<button>btn 2</button>
+					<button>btn 3</button>
+				</div>
 			</div>
+		</div>
+		
+		<!--</div class = "landing-div-directory">
+		<div>
+		</div class = "landing-div-directory">
+		<div>
+		</div class = "landing-div-directory">
+		<div>-->
+		
+		<div class = "landing-div">
+			Put some smit in here.
 		</div>
 		
         <div id = "game"></div>
         
         <script src="//cdn.jsdelivr.net/npm/phaser@3.0.0/dist/phaser.min.js"></script>
-        <script src="js/game.js"></script>
+        <!--<script src="js/game.js"></script>-->
         <script src="/socket.io/socket.io.js"></script>
 		<script>
 			/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
 			
 			var accountOptions = document.getElementById("account-options");
 			
+			var selectedBool = false;
+			
+			console.log(accountOptions.getAttribute("style"));
+			
+			
+			
 			function showHide() {
 				document.getElementById("dropdown-menu").classList.toggle("show");
-				document.getElementById("account-options").classList.toggle("white-text");
+				//accountOptions.classList.toggle("white");
+				switch(selectedBool) {
+					case false:
+						accountOptions.setAttribute("style", "color: white;");
+						selectedBool = true;
+					break;
+					
+					case true:
+						accountOptions.setAttribute("style", "color: #3de1ff;");
+						selectedBool = false;
+					break;
+				}
 			}
 			
 			accountOptions.addEventListener('click', showHide);
@@ -41,7 +71,8 @@
 			window.onclick = function(event) {
 			  if (!event.target.matches('.dropdown-button')) {
 				
-				document.getElementById("account-options").classList.toggle("white-text");
+				accountOptions.setAttribute("style", "color: #3de1ff;");
+				selectedBool = false;
 				
 				var dropdowns = document.getElementsByClassName("dropdown-content");
 				
