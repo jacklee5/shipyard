@@ -2,11 +2,52 @@
     color:red;
 }
 body{
-    font-family:"Source Sans Pro";
+	color: white;
+    font-family: 'Do Hyeon', sans-serif;
+	background-color: #186aad;
 }
-#logout-button {
-	background-color: red; /*  this was for debugging, pls ignore it or remove once it is no longer needed */
-	position: absolute;
+
+button {
+	cursor: pointer;
+}
+
+.dropdown-div {
+	position: relative;
 	float: right;
-	
+	/*display: inline-block;*/
+}
+
+.dropdown-div button {
+	font-family: 'Do Hyeon', sans-serif;
+	border: 3px solid #3de1ff;
+	color: #3de1ff;
+	background-color: #186aad;
+}
+
+/*.dropdown-button:focus {
+	color: white;
+}*/
+
+.dropdown-content {
+	display: none;
+}
+
+.dropdown-button {
+	padding: 7px 3px 7px 3px;
+	width: 62px;
+}
+
+.dropdown-content button {
+	width: 62px;
+	padding: 7px 3px 7px 3px;
+	cursor: pointer;
+	display: block;
+}
+
+.show {
+	display: block;
+}
+
+.white-text {
+	color: white;
 }
