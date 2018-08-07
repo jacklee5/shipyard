@@ -22,15 +22,32 @@
 			</div>
 		</div>
 		
-		<!--</div class = "landing-div-directory">
-		<div>
-		</div class = "landing-div-directory">
-		<div>
-		</div class = "landing-div-directory">
-		<div>-->
+		<div id = "landing-div-directory-parent">
 		
-		<div class = "landing-div">
-			Put some smit in here.
+		<div class = "landing-div-directory">
+		Inventory
+		</div>
+		
+		<div class = "landing-div-directory">
+		Planets
+		</div>
+		
+		<div class = "landing-div-directory">
+		Find a match
+		</div>
+		
+		</div>
+		
+		<div id = "inventory" class = "landing-div">
+			Put some stuff in here
+		</div>
+		
+		<div id = "planets" class = "landing-div">
+			Put some stuff in here
+		</div>
+		
+		<div id = "find-match" class = "landing-div">
+			Put some stuff in here
 		</div>
 		
         <div id = "game"></div>
@@ -44,10 +61,6 @@
 			var accountOptions = document.getElementById("account-options");
 			
 			var selectedBool = false;
-			
-			console.log(accountOptions.getAttribute("style"));
-			
-			
 			
 			function showHide() {
 				document.getElementById("dropdown-menu").classList.toggle("show");
