@@ -4,99 +4,40 @@
         <title>Shipyard</title>
         <meta charset = "utf-8">
 		<link rel='stylesheet' type='text/css' href='css/style.css'>
-		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+        <link rel='stylesheet' type='text/css' href='css/index.css'>
+		<link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:400,400i,600,700,700i" rel="stylesheet">
     </head>
     <body>
         
-		<div class = "header">
-			<h1>Welcome back, <%= name %></h1>
-			<div class = "dropdown-div">
-				<button id = "account-options" class = "dropdown-button white">Options</button>
-				<div id = "dropdown-menu" class = "dropdown-content">
-					<form method = "POST" action = "/logout">
-						<button id = "logout-button" type = "submit">Logout</button>
-					</form>
-					<button>btn 2</button>
-					<button>btn 3</button>
-				</div>
-			</div>
-		</div>
-		
-		<div id = "landing-div-directory-parent">
-		
-		<div class = "landing-div-directory">
-		Inventory
-		</div>
-		
-		<div class = "landing-div-directory">
-		Planets
-		</div>
-		
-		<div class = "landing-div-directory">
-		Find a match
-		</div>
-		
-		</div>
-		
-		<div id = "inventory" class = "landing-div">
-			Put some stuff in here
-		</div>
-		
-		<div id = "planets" class = "landing-div">
-			Put some stuff in here
-		</div>
-		
-		<div id = "find-match" class = "landing-div">
-			Put some stuff in here
-		</div>
-		
-        <div id = "game"></div>
+        <div class = "side-bar">
+            <button class = "button">Play</button>
+        </div>
+        
+        <main>        
+            <div class = "header">
+                
+                <a class = "tab">Hangar</a>
+                <a class = "tab">Laboratory</a>
+                <a class = "tab">Store</a>
+                
+                <a id = "profile-button"><%= name %></a>
+<!--
+                <div class = "dropdown-div">
+                    <button id = "account-options" class = "dropdown-button white">Options</button>
+                    <div id = "dropdown-menu" class = "dropdown-content">
+                        <form method = "POST" action = "/logout">
+                            <button id = "logout-button" type = "submit">Logout</button>
+                        </form>
+                        <button>btn 2</button>
+                        <button>btn 3</button>
+                    </div>
+                </div>
+-->
+            </div>
+        </main>
         
         <script src="//cdn.jsdelivr.net/npm/phaser@3.0.0/dist/phaser.min.js"></script>
-        <!--<script src="js/game.js"></script>-->
         <script src="/socket.io/socket.io.js"></script>
-		<script>
-			/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
-			
-			var accountOptions = document.getElementById("account-options");
-			
-			var selectedBool = false;
-			
-			function showHide() {
-				document.getElementById("dropdown-menu").classList.toggle("show");
-				//accountOptions.classList.toggle("white");
-				switch(selectedBool) {
-					case false:
-						accountOptions.setAttribute("style", "color: white;");
-						selectedBool = true;
-					break;
-					
-					case true:
-						accountOptions.setAttribute("style", "color: #3de1ff;");
-						selectedBool = false;
-					break;
-				}
-			}
-			
-			accountOptions.addEventListener('click', showHide);
-			
-			// Close the dropdown if the user clicks outside of it
-			window.onclick = function(event) {
-			  if (!event.target.matches('.dropdown-button')) {
-				
-				accountOptions.setAttribute("style", "color: #3de1ff;");
-				selectedBool = false;
-				
-				var dropdowns = document.getElementsByClassName("dropdown-content");
-				
-				for (var i = 0; i < dropdowns.length; i++) {
-				  var openDropdown = dropdowns[i];
-				  if (openDropdown.classList.contains('show')) {
-					openDropdown.classList.remove('show');
-				  }
-				}
-			  }
-			}
-		</script>
+		<script src = "/js/index.js"></script>
     </body>
 </html>

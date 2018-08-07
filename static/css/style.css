@@ -3,7 +3,7 @@
 }
 body{
 	color: white;
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 	background-color: #186aad;
 }
 
@@ -13,16 +13,13 @@ button {
 
 .dropdown-div {
 	position: relative;
-	float: right;
 	/*display: inline-block;*/
 }
 
 .dropdown-div button {
-	font-family: 'Do Hyeon', sans-serif;
 	border: 3px solid #3de1ff;
 	color: #3de1ff;
 	background-color: #186aad;
-	
 }
 
 /*.dropdown-button:focus {
@@ -35,11 +32,9 @@ button {
 
 .dropdown-button {
 	padding: 7px 3px 7px 3px;
-	width: 62px;
 }
 
 .dropdown-content button {
-	width: 62px;
 	padding: 7px 3px 7px 3px;
 	cursor: pointer;
 	display: block;
@@ -53,26 +48,18 @@ button {
 	color: white;
 }
 
-.landing-div {
-	background-color: #1e75c9;
-	width: 100%;
-	height: 700px;
+.button{
+	-webkit-transition-duration: 0.4s; /* For safari...I think */
+    transition-duration: 0.4s;
+	background-color: black;
+	padding: 1px 10px 1px 10px;
+	color: white;
+	font-family:"Bungee";
+	font-size: 20px;
+	border: 4px solid white;
 }
-
-.landing-div-directory {
-	border: 2px solid #3de1ff;
-	padding: 1px;
-	text-align: center;
-	font-size: 25px;
-	width: 100px;
-	height: 10px;
-	display: inline;
-}
-
-#planets, #find-match {
-	display: none;
-}
-
-.header {
-	display: inline;
+.button:hover {
+	cursor: pointer;
+	background-color: white;
+	color: black;
 }
