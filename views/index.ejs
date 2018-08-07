@@ -16,24 +16,36 @@
         <main>        
             <div class = "header">
                 
-                <a class = "tab">Hangar</a>
-                <a class = "tab">Laboratory</a>
-                <a class = "tab">Store</a>
+                <button id = "hanger-btn" class = "tab">Hangar</button>
+                <button id = "laboratory-btn" class = "tab">Laboratory</button>
+                <button id = "store-btn" class = "tab">Store</button>
                 
                 <a id = "profile-button"><%= name %></a>
 <!--
                 <div class = "dropdown-div">
                     <button id = "account-options" class = "dropdown-button white">Options</button>
                     <div id = "dropdown-menu" class = "dropdown-content">
+						<form method = "POST" action = "/profile">
+                            <button id = "profile-button" type = "submit">Profile</button>
+                        </form>
                         <form method = "POST" action = "/logout">
                             <button id = "logout-button" type = "submit">Logout</button>
                         </form>
-                        <button>btn 2</button>
                         <button>btn 3</button>
                     </div>
                 </div>
 -->
             </div>
+			
+			<div id="hanger" class = "page">
+			Hanger page
+			</div>
+			<div id="laboratory" class = "page">
+			Laboratory page
+			</div>
+			<div id="store" class = "page">
+			Store page
+			</div>
         </main>
         
         <script src="//cdn.jsdelivr.net/npm/phaser@3.0.0/dist/phaser.min.js"></script>

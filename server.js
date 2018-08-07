@@ -90,6 +90,10 @@ app.post("/logout", (req, res) => {
     res.redirect("/login");
 })
 
+app.get("/profile", (req, res) => {
+    res.render(__dirname + '/views/profile.ejs');
+})
+
 // Starts the server.
 server.listen(3000, function() {
     console.log('Starting server on port 3000');
