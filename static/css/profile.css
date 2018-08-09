@@ -1,4 +1,6 @@
 body {
 	background: url('../img/login-background.png');
-    background-size:contain;
+	color: white;
+	font-family:"Bungee";
 }
+

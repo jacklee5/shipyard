@@ -83,16 +83,22 @@ app.post("/login", (req, res) => {
         req.session.user = {username: username, password: password};
         res.redirect("/");
     })
-})
+});
 
 app.post("/logout", (req, res) => {
     req.session.user = undefined;
     res.redirect("/login");
-})
+});
 
 app.get("/profile", (req, res) => {
-    res.render(__dirname + '/views/profile.ejs');
+    res.render(__dirname + '/views/profile.ejs', {
+		name: "IDK how to use this, tbh so like ree",
+	});
 })
+
+app.post("/profile", (req, res) => {
+    res.redirect("/profile");
+});
 
 // Starts the server.
 server.listen(3000, function() {
