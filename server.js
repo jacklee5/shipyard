@@ -94,10 +94,11 @@ app.get("/profile", (req, res) => {
     res.render(__dirname + '/views/profile.ejs', {
 		name: "IDK how to use this, tbh so like ree",
 	});
+	console.log(req.session);
 })
 
-app.post("/profile", (req, res) => {
-    res.redirect("/profile");
+app.get("/profile/:username", (req, res) => {
+    //get a username somehow....db.get?
 });
 
 // Starts the server.
