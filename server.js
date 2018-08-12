@@ -22,6 +22,8 @@ app.set('view engine', 'ejs');
 
 let sqlite3 = require('sqlite3');
 let db = new sqlite3.Database('./db.sqlite');
+let sessionUsername = [];
+let sessionPassword = [];
 
 //create users table if it doesn't already exist
 db.run("CREATE TABLE IF NOT EXISTS users(username VARCHAR(20), password VARCHAR(20))");
@@ -92,9 +94,8 @@ app.post("/logout", (req, res) => {
 
 app.get("/profile", (req, res) => {
     res.render(__dirname + '/views/profile.ejs', {
-		name: "IDK how to use this, tbh so like ree",
+		name: "IDK how to use this pls halp me",
 	});
-	console.log(req.session);
 })
 
 app.get("/profile/:username", (req, res) => {
