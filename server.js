@@ -94,12 +94,20 @@ app.post("/logout", (req, res) => {
 
 app.get("/profile", (req, res) => {
     res.render(__dirname + '/views/profile.ejs', {
-		name: "IDK how to use this pls halp me",
+		name: req.session.user.username,
 	});
 })
 
 app.get("/profile/:username", (req, res) => {
-    //get a username somehow....db.get?
+    db.get("SELECT username FROM users WHERE username = $username COLLATE NOCASE", {
+        $username: req.params.username
+    }, (err, row) => {
+        if(!row) return res.send("user not found!");
+        res.render(__dirname + '/views/profile.ejs', {
+            name: req.params.username,
+        });
+    })
+    
 });
 
 // Starts the server.
