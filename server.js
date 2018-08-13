@@ -92,10 +92,8 @@ app.post("/logout", (req, res) => {
     res.redirect("/login");
 });
 
-app.get("/profile/", (req, res) => {
-    res.render(__dirname + '/views/profile.ejs', {
-		name: req.session.user.username,
-	});
+app.get("/profile", (req, res) => {    
+    res.redirect(`/profile/${req.session.user.username}`)
 	console.log(req.session.user);
 })
 
