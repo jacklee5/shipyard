@@ -4,3 +4,15 @@ body {
 	font-family:"Bungee";
 }
 
+#profile-heading {
+	font-size: 30px;
+	text-align: center;
+	margin-top: 0;
+	border-bottom: 4px solid #636363;
+}
+
+.main-display {
+	border: 1px solid #636363;
+	width: 300px;
+}
+

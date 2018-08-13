@@ -92,17 +92,18 @@ app.post("/logout", (req, res) => {
     res.redirect("/login");
 });
 
-app.get("/profile", (req, res) => {
+app.get("/profile/", (req, res) => {
     res.render(__dirname + '/views/profile.ejs', {
 		name: req.session.user.username,
 	});
+	console.log(req.session.user);
 })
 
 app.get("/profile/:username", (req, res) => {
     db.get("SELECT username FROM users WHERE username = $username COLLATE NOCASE", {
         $username: req.params.username
     }, (err, row) => {
-        if(!row) return res.send("user not found!");
+        if(!row) return res.status(404).send("User not found!");
         res.render(__dirname + '/views/profile.ejs', {
             name: req.params.username,
         });
