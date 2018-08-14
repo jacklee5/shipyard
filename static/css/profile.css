@@ -8,11 +8,37 @@ body {
 	font-size: 30px;
 	text-align: center;
 	margin-top: 0;
-	border-bottom: 4px solid #636363;
+	border-bottom: 4px solid #282828;
+	margin-right: 0px;
+}
+
+.profile-image {
+	background-color: #383838;
+	position: relative;
+	padding-top: 10px;
+	margin: auto;
+	width: 250px;
+	height: 250px;
 }
 
 .main-display {
-	border: 1px solid #636363;
-	width: 300px;
+	background-color: #282828;
+	display: inline-block;
+	margin-right: 20px;
+	width: 30vw;
+	max-width: 360px;
+	text-align: center;
 }
 
+.profile-statistics {
+	position: relative;
+	display: inline-block;
+	background-color: #282828;
+	width: 65vw;
+	height: 300px;
+}
+
+ul {
+	list-style: none;
+	padding: 5px;
+}

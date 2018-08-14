@@ -26,7 +26,7 @@ let sessionUsername = [];
 let sessionPassword = [];
 
 //create users table if it doesn't already exist
-db.run("CREATE TABLE IF NOT EXISTS users(username VARCHAR(20), password VARCHAR(20))");
+db.run("CREATE TABLE IF NOT EXISTS users(username VARCHAR(20), password VARCHAR(20), date TEXT)");
 
 app.use(express.static('static'));
 
@@ -45,6 +45,8 @@ app.get("/create-account", (req, res) => {
 app.post("/create-account", (req, res) => {
     let username = req.body.username;
     let password = req.body.password;
+	let date = new Date().toDateString();
+	
     let confirmPassword = req.body.confirmPassword;
     
     if(password !== confirmPassword) return res.render(__dirname + "/views/createAccount.ejs", {error:"Passwords do not match!"});
@@ -59,9 +61,11 @@ app.post("/create-account", (req, res) => {
         if(err) return console.log(err);
         if(row) return res.render(__dirname + "/views/createAccount.ejs", {error:"Sorry, someone already has that username!"})
         
-        db.run("INSERT INTO users (username, password) VALUES ($username, $password)", {
+        db.run("INSERT INTO users (username, password, date) VALUES ($username, $password, $date)", {
             $username: username,
-            $password: password
+            $password: password,
+			$date: date
+			
         }, (err) => {
             if(err) return console.log(err);
             req.session.user = {username: username, password: password};
@@ -98,12 +102,15 @@ app.get("/profile", (req, res) => {
 })
 
 app.get("/profile/:username", (req, res) => {
-    db.get("SELECT username FROM users WHERE username = $username COLLATE NOCASE", {
+	
+    db.get("SELECT username, date FROM users WHERE username = $username COLLATE NOCASE", {
         $username: req.params.username
     }, (err, row) => {
         if(!row) return res.status(404).send("User not found!");
+		
         res.render(__dirname + '/views/profile.ejs', {
             name: req.params.username,
+			date: row["date"]
         });
     })
     

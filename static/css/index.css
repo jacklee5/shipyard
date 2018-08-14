@@ -33,6 +33,11 @@ button {
 	color: black;
 }
 
+/*#play-button {
+	position: relative;
+	top: 15vh;
+}*/
+
 .landing-div {
 	background-color: #1e75c9;
 	width: 100%;
@@ -53,6 +58,7 @@ button {
     display:inline-block;
     height:100%;
     width:30vw;
+	min-width: 220px;
     box-sizing: border-box;
     white-space: normal;
     position:absolute;
