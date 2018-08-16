@@ -4,6 +4,17 @@ body {
 	font-family:"Bungee";
 }
 
+h3 {
+	margin: 0;
+	background-color: #1c1c1c;
+}
+
+ul {
+	margin-top: 0;
+	list-style: none;
+	padding: 5px;
+}
+
 #profile-heading {
 	font-size: 30px;
 	text-align: center;
@@ -21,9 +32,31 @@ body {
 	height: 250px;
 }
 
+.name-heading {
+	margin-bottom: 15px;
+}
+
+.the-basic-profile-info {
+	margin-top: 15px;
+	background-color: #1c1c1c;
+	padding-top: 15px;
+}
+
+
+
+.left-div {
+	display: inline-block;
+	width: 30vw;
+}
+
+.right-div {
+	vertical-align: top;
+	display: inline-block;
+	width: 67vw;
+}
+
 .main-display {
 	background-color: #282828;
-	display: inline-block;
 	margin-right: 20px;
 	width: 30vw;
 	max-width: 360px;
@@ -31,14 +64,16 @@ body {
 }
 
 .profile-statistics {
-	position: relative;
-	display: inline-block;
 	background-color: #282828;
 	width: 65vw;
-	height: 300px;
+	height: 384px;
 }
 
-ul {
-	list-style: none;
-	padding: 5px;
+.session-actions {
+	display: block;
+	margin-right: 20px;
+	background-color: #282828;
+	max-width: 360px;
+	width: 30vw;
+	/*height: 150px;*/
 }

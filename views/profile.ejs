@@ -10,18 +10,48 @@
     </head>
 	<body>
 		<h2 id = "profile-heading"><%=name%>'s Profile</h2>
-		<div class = "main-display">
-			<div class = "profile-image">
-				*put a profile image here or something*
+		
+		<!--<div class = "a-div-that-covers-the-body">-->
+	
+		<div class = "left-div">
+		
+			<div class = "main-display">
+				<h3 class = "name-heading"><%=name%></h3>
+				<div class = "profile-image">
+					*put a profile image here or something*
+				</div>
+				<ul class = "the-basic-profile-info">
+					<li>Faction/Group/Guild if we will make that a thing:  N/A</li>
+					<li>Date Joined:  <%=date%></li>
+				</ul>
 			</div>
-			<ul>
-				<li>Name:  <%=name%></li>
-				<li>Date Joined:  <%=date%></li>
-			</ul>
+			
+			<div class = "session-actions">
+				<h3>YOUR ACTIONS</h3>
+				<p>The buttons are unstyled, i will play with that tmrw or friday <br>-tlr</p>
+				<button>Add Friend</button>
+				<button>Send Message (?)</button>
+				<button>Report User</button>
+			</div>
+		
 		</div>
 		
-		<div class = "profile-statistics">
-			
+		<div class = "right-div">
+			<div class = "profile-statistics">
+				<h3>STATISTICS</h3>
+				<ul>
+					<li>Total Games Played:  *blank</li>
+					<li>Total Games Won:  *blank</li>
+					<li>Game to Win Ratio:  *blank</li>
+					<li>Average Kills per game:  *blank</li>
+					<li>Average Deaths per game:  *blank</li>
+					<li>KDR:  *blank</li>
+					<li> <br> PLEASE NOTE CHANGE THE ABOVE HOW EVER YOU WOULD LIKE</li>
+				</ul>
+			</div>
 		</div>
+		
+		
+		<!--</div>-->
 	</body>
 </html>
