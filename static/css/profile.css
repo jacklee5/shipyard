@@ -5,8 +5,10 @@ body {
 }
 
 h3 {
+	font-size: 24px;
+	padding-left: 15px;
 	margin: 0;
-	background-color: #1c1c1c;
+	background-color: #151515;
 }
 
 ul {
@@ -15,12 +17,33 @@ ul {
 	padding: 5px;
 }
 
+button {
+	margin-left: 5px;
+}
+
 #profile-heading {
 	font-size: 30px;
 	text-align: center;
 	margin-top: 0;
 	border-bottom: 4px solid #282828;
 	margin-right: 0px;
+}
+
+.button{
+	-webkit-transition-duration: 0.4s; /* For safari...I think */
+    transition-duration: 0.4s;
+	background-color: black;
+	padding: 1px 5px 1px 5px;
+	color: white;
+	font-family:"Bungee";
+	font-size: 11px;
+	border: 2px solid white;
+}
+
+.button:hover {
+	cursor: pointer;
+	background-color: white;
+	color: black;
 }
 
 .profile-image {
@@ -33,12 +56,13 @@ ul {
 }
 
 .name-heading {
+	padding: 0;
 	margin-bottom: 15px;
 }
 
 .the-basic-profile-info {
 	margin-top: 15px;
-	background-color: #1c1c1c;
+	background-color: #151515;
 	padding-top: 15px;
 }
 
@@ -66,7 +90,7 @@ ul {
 .profile-statistics {
 	background-color: #282828;
 	width: 65vw;
-	height: 384px;
+	/*height: 384px;*/
 }
 
 .session-actions {

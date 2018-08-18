@@ -22,16 +22,22 @@
 				</div>
 				<ul class = "the-basic-profile-info">
 					<li>Faction/Group/Guild if we will make that a thing:  N/A</li>
-					<li>Date Joined:  <%=date%></li>
+					<li>About themselves:  </li>
 				</ul>
 			</div>
 			
 			<div class = "session-actions">
 				<h3>YOUR ACTIONS</h3>
-				<p>The buttons are unstyled, i will play with that tmrw or friday <br>-tlr</p>
-				<button>Add Friend</button>
-				<button>Send Message (?)</button>
-				<button>Report User</button>
+				<div class = "non-self-profile">
+					<button class = "button">Add Friend</button>
+					<button class = "button">Send Message (?)</button>
+					<button class = "button">Report User</button>
+				</div>
+				<div class = "self-profile" style = "display: none">
+					<button class = "button">Change Username</button>
+					<button class = "button">Change Password</button>
+					<button class = "button">*blank button*</button>
+				</div>
 			</div>
 		
 		</div>
@@ -40,13 +46,15 @@
 			<div class = "profile-statistics">
 				<h3>STATISTICS</h3>
 				<ul>
+					<li>Date Joined:  <%=date%></li>
 					<li>Total Games Played:  *blank</li>
 					<li>Total Games Won:  *blank</li>
 					<li>Game to Win Ratio:  *blank</li>
 					<li>Average Kills per game:  *blank</li>
 					<li>Average Deaths per game:  *blank</li>
 					<li>KDR:  *blank</li>
-					<li> <br> PLEASE NOTE CHANGE THE ABOVE HOW EVER YOU WOULD LIKE</li>
+					
+					<li> <br> ^PLEASE NOTE CHANGE THE ABOVE HOW EVER YOU WOULD LIKE - TLR</li>
 				</ul>
 			</div>
 		</div>
