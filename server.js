@@ -110,6 +110,7 @@ app.get("/profile/:username", (req, res) => {
 		
         res.render(__dirname + '/views/profile.ejs', {
             name: req.params.username,
+			sessionUser: req.session.user.username,
 			date: row["date"]
         });
     })

@@ -9,7 +9,22 @@
 		<link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:400,400i,600,700,700i" rel="stylesheet">
     </head>
 	<body>
-		<h2 id = "profile-heading"><%=name%>'s Profile</h2>
+		<div class = "profile-heading-div">
+			<span id = "profile-heading"><%=name%>'s Profile</span>
+			<button id = "user-button" class = "user-button"><%= sessionUser %></button>
+		</div>
+		
+		<div id = "dropdown-menu" class = "dropdown-content">
+				<form method = "GET" action = "/">
+					<button id = "profile-button" class = "dropdown-option-btn" type = "submit">Home</button>
+				</form>
+				<form method = "GET" action = "/profile">
+					<button id = "logout-button" class = "dropdown-option-btn" type = "submit">Your Profile</button>
+				</form>
+				<form method = "POST" action = "/logout">
+					<button id = "logout-button" class = "dropdown-option-btn" type = "submit">Logout</button>
+				</form>
+		</div>
 		
 		<!--<div class = "a-div-that-covers-the-body">-->
 	
@@ -26,18 +41,40 @@
 				</ul>
 			</div>
 			
-			<div class = "session-actions">
+			<div id = "session-actions" class = "session-actions">
 				<h3>YOUR ACTIONS</h3>
-				<div class = "non-self-profile">
-					<button class = "button">Add Friend</button>
-					<button class = "button">Send Message (?)</button>
-					<button class = "button">Report User</button>
-				</div>
-				<div class = "self-profile" style = "display: none">
-					<button class = "button">Change Username</button>
-					<button class = "button">Change Password</button>
-					<button class = "button">*blank button*</button>
-				</div>
+				<%if (sessionUser) {%>
+					<%if (name === sessionUser) {%>
+						<div id = "self-profile" class = "self-profile">
+							<button id = "change-username" class = "button">Icon 1</button>
+							<button id = "change-password" class = "button">Icon 2</button>
+							<button id = "blank-button" class = "button">Icon 3</button>
+						</div>
+						
+						<div id = "non-self-profile" class = "non-self-profile" style = "display: none">
+							<button id = "add-friend" class = "button">Icon 4</button>
+							<button id = "send-message" class = "button">Icon 5</button>
+							<button id = "report-user" class = "button">Icon 6</button>
+						</div>
+					<%} else {%>
+						<div id = "self-profile" class = "self-profile" style = "display: none">
+							<button id = "change-username" class = "button">Icon 1</button>
+							<button id = "change-password" class = "button">Icon 2</button>
+							<button id = "blank-button" class = "button">Icon 3</button>
+						</div>
+						
+						<div id = "non-self-profile" class = "non-self-profile">
+							<button id = "add-friend" class = "button">Icon 4</button>
+							<button id = "send-message" class = "button">Icon 5</button>
+							<button id = "report-user" class = "button">Icon 6</button>
+						</div>
+					<%}%>
+				<%} else {%>
+					<div id = "no-login-profile" class = "no-login-profile">
+						Login for more actions on this user!
+					</div>
+				<%}%>
+				<span id = "button-caption"></span>
 			</div>
 		
 		</div>
@@ -61,5 +98,7 @@
 		
 		
 		<!--</div>-->
+		
+		<script src = "/js/profile.js"></script>
 	</body>
 </html>
