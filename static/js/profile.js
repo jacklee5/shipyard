@@ -52,6 +52,17 @@ reportUser.addEventListener("mouseout", () => {
 	document.getElementById('button-caption').textContent = ""
 });
 
+/* when the user hovers over the pfp, let them upload an image
+var profileImage = document.getElementById("profile-image");
+
+profileImage.addEventListener("mouseover", () => {
+	profileImage.setAttribute("style", "background-color: #6d6d6d")
+});
+
+profileImage.addEventListener("mouseout", () => {
+	profileImage.setAttribute("style", "background-color: #383838")
+});*/
+
 /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
 			
 var accountOptions = document.getElementById("user-button");

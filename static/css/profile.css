@@ -6,15 +6,17 @@ body {
 
 h3 {
 	font-size: 24px;
-	padding-left: 15px;
 	margin: 0;
-	background-color: #151515;
+	background-color: #2d2d2d;
+	text-align: center;
 }
 
 ul {
 	margin-top: 0;
 	list-style: none;
 	padding: 5px;
+	font-family: "Oswald";
+	font-size: 21px;
 }
 
 button {
@@ -33,14 +35,14 @@ button {
 
 .profile-heading-div {
 	text-align: center;
-	border-bottom: 4px solid #282828;
+	border-bottom: 4px solid #444444;
 	margin-bottom: 17px;
 }
 
 .button{
 	-webkit-transition-duration: 0.4s; /* For safari...I think */
     transition-duration: 0.4s;
-	background-color: black;
+	background-color: #2a2a2a;
 	padding: 1px 5px 1px 5px;
 	color: white;
 	font-family:"Bungee";
@@ -63,6 +65,11 @@ button {
 	height: 250px;
 }
 
+.profile-image:hover {
+	background-color: #6d6d6d;
+	cursor: pointer;
+}
+
 .name-heading {
 	padding: 0;
 	margin-bottom: 15px;
@@ -70,7 +77,7 @@ button {
 
 .the-basic-profile-info {
 	margin-top: 15px;
-	background-color: #151515;
+	background-color: #2a2a2a;
 	padding-top: 15px;
 }
 
@@ -88,7 +95,7 @@ button {
 }
 
 .main-display {
-	background-color: #282828;
+	background-color: #444444;
 	margin-right: 20px;
 	width: 30vw;
 	max-width: 360px;
@@ -96,19 +103,33 @@ button {
 }
 
 .profile-statistics {
-	background-color: #282828;
+	background-color: #444444;
 	width: 65vw;
 	/*height: 384px;*/
+}
+
+#change-username {
+	margin-left: 0;
+}
+
+.profile-actions-btn {
+	margin-left: 25px;
 }
 
 .session-actions {
 	display: block;
 	margin-right: 20px;
 	margin-top: 30px;
-	background-color: #282828;
+	background-color: #444444;
 	max-width: 360px;
 	width: 30vw;
+	text-align: center;
 	/*height: 150px;*/
+}
+
+.non-self-profile, .self-profile {
+	display: flex;
+	justify-content: center;
 }
 
 /*drop down div stuff*/
@@ -116,7 +137,7 @@ button {
 #user-button{
 	background-color: rgba(0, 0, 0, 0);
 	position: relative;
-	display: inline-block;
+	display: block;
 	float: right;
 	color: white;
 	border: none;
@@ -124,14 +145,19 @@ button {
     line-height:72px;
     font-size:16px;
     cursor:pointer;
-	z-index: 1;
+}
+
+#user-button:hover {
+	transition-duration: 0.3s;
+	text-shadow:0px 0px 9px rgba(255,255,255,0.9);
 }
 
 .dropdown-content {
 	position:absolute;
-    right:32px;
+    right:39px;
 	display: none;
 	float: right;
+	top: 85px;
 }
 
 .dropdown-button {
@@ -147,13 +173,15 @@ button {
 	background-color: rgb(0, 0, 0);
 	padding: 7px 3px 7px 3px;
 	cursor: pointer;
-	display: inline-block;
+	display: block;
 	/*position: relative;*/
 	
 }
 
 .dropdown-content button:hover {
+	transition-duration: 0.3s;
 	text-shadow:0px 0px 8px rgba(255,255,255,0.9);
+	background:rgba(25, 25, 25);
 }
 .show {
 	display: block;

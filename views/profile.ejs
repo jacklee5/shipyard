@@ -7,6 +7,7 @@
 		<link rel='stylesheet' href='../css/profile.css'>
 		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:400,400i,600,700,700i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     </head>
 	<body>
 		<div class = "profile-heading-div">
@@ -32,8 +33,8 @@
 		
 			<div class = "main-display">
 				<h3 class = "name-heading"><%=name%></h3>
-				<div class = "profile-image">
-					*put a profile image here or something*
+				<div class = "profile-image" id = "profile-image">
+					*Upload PFP (not implemented)*
 				</div>
 				<ul class = "the-basic-profile-info">
 					<li>Faction/Group/Guild if we will make that a thing:  N/A</li>
@@ -46,27 +47,27 @@
 				<%if (sessionUser) {%>
 					<%if (name === sessionUser) {%>
 						<div id = "self-profile" class = "self-profile">
-							<button id = "change-username" class = "button">Icon 1</button>
-							<button id = "change-password" class = "button">Icon 2</button>
-							<button id = "blank-button" class = "button">Icon 3</button>
+							<button id = "change-username" class = "button profile-actions-btn">Icon 1</button>
+							<button id = "change-password" class = "button profile-actions-btn">Icon 2</button>
+							<button id = "blank-button" class = "button profile-actions-btn">Icon 3</button>
 						</div>
 						
 						<div id = "non-self-profile" class = "non-self-profile" style = "display: none">
-							<button id = "add-friend" class = "button">Icon 4</button>
-							<button id = "send-message" class = "button">Icon 5</button>
-							<button id = "report-user" class = "button">Icon 6</button>
+							<button id = "add-friend" class = "button profile-actions-btn">Icon 4</button>
+							<button id = "send-message" class = "button profile-actions-btn">Icon 5</button>
+							<button id = "report-user" class = "button profile-actions-btn">Icon 6</button>
 						</div>
 					<%} else {%>
 						<div id = "self-profile" class = "self-profile" style = "display: none">
-							<button id = "change-username" class = "button">Icon 1</button>
-							<button id = "change-password" class = "button">Icon 2</button>
-							<button id = "blank-button" class = "button">Icon 3</button>
+							<button id = "change-username" class = "button profile-actions-btn">Icon 1</button>
+							<button id = "change-password" class = "button profile-actions-btn">Icon 2</button>
+							<button id = "blank-button" class = "button profile-actions-btn">Icon 3</button>
 						</div>
 						
 						<div id = "non-self-profile" class = "non-self-profile">
-							<button id = "add-friend" class = "button">Icon 4</button>
-							<button id = "send-message" class = "button">Icon 5</button>
-							<button id = "report-user" class = "button">Icon 6</button>
+							<button id = "add-friend" class = "button profile-actions-btn">Icon 4</button>
+							<button id = "send-message" class = "button profile-actions-btn">Icon 5</button>
+							<button id = "report-user" class = "button profile-actions-btn">Icon 6</button>
 						</div>
 					<%}%>
 				<%} else {%>
