@@ -117,6 +117,12 @@ app.get("/profile/:username", (req, res) => {
     
 });
 
+app.get("/change_username", (req, res) => {
+	res.render(__dirname + '/views/editUsername.ejs', {
+		
+    });
+});
+
 // Starts the server.
 server.listen(3000, function() {
     console.log('Starting server on port 3000');

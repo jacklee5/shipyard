@@ -31,7 +31,7 @@
 	
 		<div class = "left-div">
 		
-			<div class = "main-display">
+			<div class = "main-display profile-information-boxes">
 				<h3 class = "name-heading"><%=name%></h3>
 				<div class = "profile-image" id = "profile-image">
 					*Upload PFP (not implemented)*
@@ -42,12 +42,14 @@
 				</ul>
 			</div>
 			
-			<div id = "session-actions" class = "session-actions">
+			<div id = "session-actions" class = "session-actions profile-information-boxes">
 				<h3>YOUR ACTIONS</h3>
 				<%if (sessionUser) {%>
 					<%if (name === sessionUser) {%>
 						<div id = "self-profile" class = "self-profile">
-							<button id = "change-username" class = "button profile-actions-btn">Icon 1</button>
+							<form method = "GET" action = "/change_username">
+								<button id = "change-username" class = "button profile-actions-btn">Icon 1</button>
+							<form>
 							<button id = "change-password" class = "button profile-actions-btn">Icon 2</button>
 							<button id = "blank-button" class = "button profile-actions-btn">Icon 3</button>
 						</div>
@@ -59,7 +61,9 @@
 						</div>
 					<%} else {%>
 						<div id = "self-profile" class = "self-profile" style = "display: none">
-							<button id = "change-username" class = "button profile-actions-btn">Icon 1</button>
+							<form method = "GET" action = "/change_username">
+								<button id = "change-username" class = "button profile-actions-btn">Icon 1</button>
+							<form>
 							<button id = "change-password" class = "button profile-actions-btn">Icon 2</button>
 							<button id = "blank-button" class = "button profile-actions-btn">Icon 3</button>
 						</div>
@@ -81,19 +85,41 @@
 		</div>
 		
 		<div class = "right-div">
-			<div class = "profile-statistics">
+			<div class = "profile-statistics profile-information-boxes">
 				<h3>STATISTICS</h3>
-				<ul>
-					<li>Date Joined:  <%=date%></li>
-					<li>Total Games Played:  *blank</li>
-					<li>Total Games Won:  *blank</li>
-					<li>Game to Win Ratio:  *blank</li>
-					<li>Average Kills per game:  *blank</li>
-					<li>Average Deaths per game:  *blank</li>
-					<li>KDR:  *blank</li>
+				<table>
+					<tr>
+						<th>Date Joined:</th>
+						<td><%=date%></td>
+					</tr>
+					<tr>
+						<th>Total Games Played:</th>
+						<td>*blank</td>
+					</tr>
+					<tr>
+						<th>Total Games Won:</th>
+						<td>*blank</td>
+					</tr>
+					<tr>
+						<th>Game to Win Ratio:</th>
+						<td>*blank</td>
+					</tr>
+					<tr>
+						<th>Average Kills per game:</th>
+						<td>*blank</td>
+					</tr>
+					<tr>
+						<th>Average Deaths per game:</th>
+						<td>*blank</td>
+					</tr>
+					<tr>
+						<th>KDR:</th>
+						<td>*blank</td>
+					</tr>
+				</table>
 					
-					<li> <br> ^PLEASE NOTE CHANGE THE ABOVE HOW EVER YOU WOULD LIKE - TLR</li>
-				</ul>
+					
+					<br> ^PLEASE NOTE CHANGE THE ABOVE HOW EVER YOU WOULD LIKE - TLR
 			</div>
 		</div>
 		

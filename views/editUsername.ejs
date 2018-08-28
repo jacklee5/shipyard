@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Change your Username | Shipyard</title>
+        <meta charset = "utf-8">
+		<link rel='stylesheet' href='../css/editUsername.css'>
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:400,400i,600,700,700i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	</head>
 	<body>
+		<h1>Change Username</h1>
+		
+			
+		<span class = "warning-text">Note: You can only change your username once every [insert duration] Please change your username wisely and sparingly!</span><br><br>
+		
+		<div class = "edit-username-box" id = "edit-username-box">
+			<form action = "/change_username" method = "POST">
+				<input name = "currentUsername" placeholder = "Current Username"><br>
+				<input name = "newUsername" placeholder = "New Username"><br>
+				<input name = "confirmNewUsername" placeholder = "Confirm New Username"><br><br>
+				<button class = "button" id = "confirm-changes-button" type = "submit">Confirm Changes</button>
+			</form>
+		</div>
 	</body>
 </html>

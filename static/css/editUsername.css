@@ -1,0 +1,55 @@
+body {
+	background: url('../img/login-background.png');
+	color: white;
+	text-align: center;
+}
+
+h1{
+	text-align: center;
+    font-family: "Bungee";
+    font-size: 50px;
+	margin: 10px 0px 10px 0px;
+}
+
+input{
+    outline:none;
+    border:none;
+    padding:16px;
+    margin-bottom:8px;
+}
+input:focus{
+    outline:none;
+}
+
+#confirm-changes-button {
+	font-size: 20px;
+}
+
+.edit-username-box {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.warning-text {
+	color: rgba(200, 200, 200, 150);
+}
+
+/* for the buttons */
+
+.button{
+	background-color: rgba(0,0,0,0);
+	padding: 1px 5px 1px 5px;
+	color: white;
+	font-family:"Bungee";
+	font-size: 11px;
+	border: 2px solid white;
+}
+
+.button:hover {
+	-webkit-transition-duration: 0.4s; /* For safari...I think */
+    transition-duration: 0.4s;
+	cursor: pointer;
+	background-color: white;
+	color: black;
+}
