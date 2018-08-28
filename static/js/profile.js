@@ -1,56 +1,56 @@
 /*when the user hovers over a button, give a caption of what the button will do */
 
-var changeUsername = document.getElementById('change-username'), changePassword = document.getElementById('change-password'), blankButton = document.getElementById('blank-button'), addFriend = document.getElementById('add-friend'), sendMessage = document.getElementById('send-message'), reportUser = document.getElementById('report-user');
-
-var body = document.getElementsByTagName('BODY')[0];
-
-changeUsername.addEventListener("mouseover", () => {
-	document.getElementById('button-caption').textContent = "Change Username"
-});
-
-changeUsername.addEventListener("mouseout", () => {
-	document.getElementById('button-caption').textContent = ""
-});
-
-changePassword.addEventListener("mouseover", () => {
-	document.getElementById('button-caption').textContent = "Change Password"
-});
-
-changePassword.addEventListener("mouseout", () => {
-	document.getElementById('button-caption').textContent = ""
-});
-
-blankButton.addEventListener("mouseover", () => {
-	document.getElementById('button-caption').textContent = "Blank Button"
-});
-
-blankButton.addEventListener("mouseout", () => {
-	document.getElementById('button-caption').textContent = ""
-});
-
-addFriend.addEventListener("mouseover", () => {
-	document.getElementById('button-caption').textContent = "Add Friend"
-});
-
-addFriend.addEventListener("mouseout", () => {
-	document.getElementById('button-caption').textContent = ""
-});
-
-sendMessage.addEventListener("mouseover", () => {
-	document.getElementById('button-caption').textContent = "Send Message (?)"
-});
-
-sendMessage.addEventListener("mouseout", () => {
-	document.getElementById('button-caption').textContent = ""
-});
-
-reportUser.addEventListener("mouseover", () => {
-	document.getElementById('button-caption').textContent = "Report this user"
-});
-
-reportUser.addEventListener("mouseout", () => {
-	document.getElementById('button-caption').textContent = ""
-});
+//var changeUsername = document.getElementById('change-username'), changePassword = document.getElementById('change-password'), blankButton = document.getElementById('blank-button'), addFriend = document.getElementById('add-friend'), sendMessage = document.getElementById('send-message'), reportUser = document.getElementById('report-user');
+//
+//var body = document.getElementsByTagName('BODY')[0];
+//
+//changeUsername.addEventListener("mouseover", () => {
+//	document.getElementById('button-caption').textContent = "Change Username"
+//});
+//
+//changeUsername.addEventListener("mouseout", () => {
+//	document.getElementById('button-caption').textContent = ""
+//});
+//
+//changePassword.addEventListener("mouseover", () => {
+//	document.getElementById('button-caption').textContent = "Change Password"
+//});
+//
+//changePassword.addEventListener("mouseout", () => {
+//	document.getElementById('button-caption').textContent = ""
+//});
+//
+//blankButton.addEventListener("mouseover", () => {
+//	document.getElementById('button-caption').textContent = "Blank Button"
+//});
+//
+//blankButton.addEventListener("mouseout", () => {
+//	document.getElementById('button-caption').textContent = ""
+//});
+//
+//addFriend.addEventListener("mouseover", () => {
+//	document.getElementById('button-caption').textContent = "Add Friend"
+//});
+//
+//addFriend.addEventListener("mouseout", () => {
+//	document.getElementById('button-caption').textContent = ""
+//});
+//
+//sendMessage.addEventListener("mouseover", () => {
+//	document.getElementById('button-caption').textContent = "Send Message (?)"
+//});
+//
+//sendMessage.addEventListener("mouseout", () => {
+//	document.getElementById('button-caption').textContent = ""
+//});
+//
+//reportUser.addEventListener("mouseover", () => {
+//	document.getElementById('button-caption').textContent = "Report this user"
+//});
+//
+//reportUser.addEventListener("mouseout", () => {
+//	document.getElementById('button-caption').textContent = ""
+//});
 
 /* when the user hovers over the pfp, let them upload an image
 var profileImage = document.getElementById("profile-image");

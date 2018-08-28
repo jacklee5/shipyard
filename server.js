@@ -26,7 +26,7 @@ let sessionUsername = [];
 let sessionPassword = [];
 
 //create users table if it doesn't already exist
-db.run("CREATE TABLE IF NOT EXISTS users(username VARCHAR(20), password VARCHAR(20), date TEXT)");
+db.run("CREATE TABLE IF NOT EXISTS users(username VARCHAR(20), password VARCHAR(20), date INTEGER)");
 
 app.use(express.static('static'));
 
