@@ -58,7 +58,7 @@ body{
 .side-bar button{
     font-size:34px;
     position:relative;
-	top: 150px;
+	top: 15%;
     left:50%;
 	transform:translateX(-50%);
     margin-top:32px;

@@ -30,14 +30,21 @@ table {
 	text-align: center;
 }
 
-td, th {
+td, th{
+	transition-duration: 0.3s;
 	font-family: "Oswald";
 	font-size: 21px;
 	border-bottom: 2px solid white;
 }
 
 th {
+	
 	border-right: 2px solid white;
+}
+
+td:hover, th:hover {
+	
+	background: rgba(99, 99, 99, 1);
 }
 
 button {
@@ -142,14 +149,8 @@ button {
 }
 
 .session-actions {
-	display: block;
-	margin-right: 20px;
-	margin-top: 30px;
-	background-color: #212121;
-	max-width: 360px;
-	width: 30vw;
-	text-align: center;
-	/*height: 150px;*/
+	margin-top: 20px;
+	
 }
 
 .non-self-profile, .self-profile {
@@ -180,7 +181,7 @@ h3{
     vertical-align: top;
 }
 
-.overview-desc{
+.overview-desc {
     text-transform:uppercase;
     font-size:12px;
     font-weight:600;
@@ -192,7 +193,7 @@ h3{
     border-spacing: 16px 8px;
 }
 
-.overview-value{
+.overview-value {
     font-size:18px;
     margin:0px 8px;
 }

@@ -130,20 +130,82 @@
         <div id = "overview" class = "section">
             <h3>Overview</h3>
             <span id = "username"><%=name%></span>
-            <table id = "overview-stats">
+			
+
+			<table id = "overview-stats">
                 <tr class = "overview-desc">
                     <td>Date Joined</td>
                     <td>Games Played</td>
+					<td>KDR</td>
                 </tr>
                 <tr class = "overview-value">
                     <td><%=date%></td>
                     <td>a #</td>
+					<td>ratio</td>
                 </tr>
             </table>
+			
+<!--
+			
+            <table id = "overview-stats">
+                <tr>
+                    <th>Date Joined</th>
+					<td><%=date%></td>
+                    
+                </tr>
+                <tr>
+                    <th>Games Played</th>
+                    <td>a #</td>
+					
+                </tr>
+				<tr>
+					<th>KDR</th>
+					<td>ratio</td>
+				</tr>
+            </table>
         </div>
-
+-->
 		
-		
+		<div id = "session-actions" class = "session-actions">
+			<h3>YOUR ACTIONS</h3>
+			<%if (sessionUser) {%>
+				<%if (name === sessionUser) {%>
+					<div id = "self-profile" class = "self-profile">
+						<form method = "GET" action = "/change_username">
+							<button id = "change-username" class = "button profile-actions-btn">Icon 1</button>
+						<form>
+						<button id = "change-password" class = "button profile-actions-btn">Icon 2</button>
+						<button id = "blank-button" class = "button profile-actions-btn">Icon 3</button>
+					</div>
+					
+					<div id = "non-self-profile" class = "non-self-profile" style = "display: none">
+						<button id = "add-friend" class = "button profile-actions-btn">Icon 4</button>
+						<button id = "send-message" class = "button profile-actions-btn">Icon 5</button>
+						<button id = "report-user" class = "button profile-actions-btn">Icon 6</button>
+					</div>
+				<%} else {%>
+					<div id = "self-profile" class = "self-profile" style = "display: none">
+						<form method = "GET" action = "/change_username">
+							<button id = "change-username" class = "button profile-actions-btn">Icon 1</button>
+						<form>
+						<button id = "change-password" class = "button profile-actions-btn">Icon 2</button>
+						<button id = "blank-button" class = "button profile-actions-btn">Icon 3</button>
+					</div>
+					
+					<div id = "non-self-profile" class = "non-self-profile">
+						<button id = "add-friend" class = "button profile-actions-btn">Icon 4</button>
+						<button id = "send-message" class = "button profile-actions-btn">Icon 5</button>
+						<button id = "report-user" class = "button profile-actions-btn">Icon 6</button>
+					</div>
+				<%}%>
+			<%} else {%>
+				<div id = "no-login-profile" class = "no-login-profile">
+					Login for more actions on this user!
+				</div>
+			<%}%>
+			<span id = "button-caption"></span>
+		</div>
+			
 		<!--</div>-->
 		
 		<script src = "/js/profile.js"></script>

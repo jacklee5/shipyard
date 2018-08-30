@@ -118,9 +118,15 @@ app.get("/profile/:username", (req, res) => {
 });
 
 app.get("/change_username", (req, res) => {
+	if(!req.session.user) return res.send("You are not logged in!");
 	res.render(__dirname + '/views/editUsername.ejs', {
-		
+		error: ""
     });
+});
+app.post("/change_username", (req, res) => {
+	let currentUsername = req.body.currentUsername;
+	let newUsername = req.body.newUsername;
+	let confirmUsername = req.body.confirmUsername;
 });
 
 // Starts the server.
